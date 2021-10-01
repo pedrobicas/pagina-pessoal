@@ -1,0 +1,625 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@300&display=swap');
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+/* Animação de scroll */
+html {
+    scroll-behavior: smooth;
+}
+/* Customização da barra de navegação */
+.layout {
+    overflow: hidden;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(33, 52, 189);
+    z-index: 1000;
+}
+.layout a {
+    font-family: 'Gemunu Libre', sans-serif;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    background-image: -webkit-linear-gradient(45deg, rgb(106, 121, 238) 50%, transparent 50%);
+    background-image: linear-gradient(45deg, rgb(106, 121, 238) 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
+  }
+.layout a:hover {
+    background-position: 0;
+}
+#btn-mobile {
+    display: none;
+}
+/* Customização do inicio */
+.coluna {
+    padding-top: 20px;
+    display: flex;
+    background: url(../img/background.png) no-repeat fixed center;
+    background-size: 120%;
+} 
+/* Customização da parte central do inicio */
+.center {
+    font-family: 'Inconsolata', monospace;
+    color: white;
+    background-color: rgba(52, 57, 88, 0.555);
+    padding: 20px;
+    font-size: 25px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.center h1 {
+    font-family: 'Gemunu Libre', sans-serif;
+    margin: 20px;
+    margin-left: 0;
+    font-size: 65px;
+}
+
+.center p {
+    font-family: 'Gemunu Libre', sans-serif;
+    margin-top: 10px;
+    font-size: 30px;
+}
+.center h3{
+    font-family: 'Gemunu Libre', sans-serif;
+    font-size: 35px;
+}
+/* Customização da parte lateral do inicio */
+.lateral {
+    display: flex;
+    width: 40%;
+    background-color: rgb(33, 52, 189);
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.lateral h2, .lateral p, .lateral a {
+    color: white;
+    padding: 20px;
+    font-size: 17px;
+}
+
+.lateral img {
+    border: solid white 1px;
+    border-radius: 50%;
+    width: 70%;
+    margin: 50px;
+}
+
+.lateral a {
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+}
+/* Animações do cursor piscando e digitando */
+.cursor h1 {
+    font-family: 'Gemunu Libre', sans-serif;
+    border-right: 2px solid white;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: cursor 500ms infinite normal;
+}
+@keyframes cursor {
+    from {
+        border-right-color: white;
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+.digitando {
+    animation: digitando 4s steps(40);
+}
+
+@keyframes digitando {
+    from {
+        width: 0;
+    }
+    to {
+        width: 28em;
+    }
+}
+/* Customização daos icons */
+.icons {
+    color: white;
+    margin: 50px;
+}
+
+.icons a:hover {
+    transition: color 300ms;
+    color: rgb(79, 94, 124);
+}
+/* Customização dos textos */
+.texto p {
+    line-height: 30px;
+    margin: 20px;
+    font-size: 20px;
+}
+
+.texto {
+    line-height: 30px;
+    color: rgb(52, 57, 88);
+    padding-top: 50px;
+    padding-left: 100px;
+    width: 70%;
+}
+
+.texto h2 {
+    font-family: 'Source Code Pro', monospace;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    font-size: 30px;
+    color: rgb(82, 89, 138);
+}
+
+.texto h3 {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 23px;
+    color: rgb(84, 90, 128);
+}
+
+.texto a {
+    text-decoration: none;
+    color: rgb(82, 89, 138);
+}
+
+
+/* Barras de progresso */
+.progresso-flex {
+    display: flex;
+    align-items: center;
+    height: 4px;
+    background: rgb(189, 189, 189);
+    position: relative;
+    border-radius: 20px;
+}
+
+.progresso-flex .barra-progresso-flex {
+    position: absolute;
+    height: 140%;
+    background-color: rgb(66, 74, 124);
+    width: 65%;
+    border-radius: 20px;
+    animation: barra-flex 3s;
+}
+/* Animação barra de progresso */
+@keyframes barra-flex {
+    0% {
+        width: 0%;
+    }
+    65% {
+        width: 65%
+    }
+}
+
+.progresso-adap {
+    display: flex;
+    align-items: center;
+    height: 4px;
+    background-color: rgb(189, 189, 189);
+    position: relative;
+    border-radius: 20px;
+}
+
+.progresso-adap .barra-progresso-adap {
+    position: absolute;
+    height: 140%;
+    background-color: rgb(66, 74, 124);
+    width: 80%;
+    border-radius: 20px;
+    animation: barra-adap 3s;
+}
+
+@keyframes barra-adap {
+    0% {
+        width: 0%;
+    }
+    80% {
+        width: 80%
+    }
+}
+
+.progresso-apren {
+    display: flex;
+    align-items: center;
+    height: 4px;
+    background-color: rgb(189, 189, 189);
+    position: relative;
+    border-radius: 20px;
+}
+
+.progresso-apren .barra-progresso-apren {
+    position: absolute;
+    height: 140%;
+    background-color: rgb(66, 74, 124);
+    border-radius: 20px;
+    width: 70%;
+    animation: barra-apren 3s;
+}
+
+@keyframes barra-apren {
+    0% {
+        width: 0%;
+    }
+    70% {
+        width: 70%
+    }
+}
+
+.progresso-html {
+    display: flex;
+    align-items: center;
+    height: 4px;
+    background-color: rgb(189, 189, 189);
+    position: relative;
+    border-radius: 20px;
+}
+
+.progresso-html .barra-progresso-html {
+    position: absolute;
+    height: 140%;
+    background-color: rgb(66, 74, 124);
+    border-radius: 20px;
+    width: 30%;
+    animation: barra-html 3s;
+}
+
+@keyframes barra-html {
+    0% {
+        width: 0%;
+    }
+    10% {
+        width: 10%
+    }
+}
+
+.progresso-py {
+    display: flex;
+    align-items: center;
+    height: 4px;
+    background-color: rgb(189, 189, 189);
+    position: relative;
+    border-radius: 20px;
+}
+
+.progresso-py .barra-progresso-py {
+    border-radius: 20px;
+    position: absolute;
+    height: 140%;
+    background-color: rgb(66, 74, 124);
+    width: 5%;
+    animation: barra-py 3s;
+}
+
+@keyframes barra-py {
+    0% {
+        width: 0%;
+    }
+    5% {
+        width: 5%
+    }
+}
+
+.progresso-ing {
+    display: flex;
+    align-items: center;
+    height: 4px;
+    background-color: rgb(189, 189, 189);
+    position: relative;
+    border-radius: 20px;
+}
+
+.progresso-ing .barra-progresso-ing {
+    position: absolute;
+    height: 140%;
+    background-color: rgb(66, 74, 124);
+    width: 60%;
+    border-radius: 20px;
+    animation: barra-ing 3s;
+}
+
+@keyframes barra-ing {
+    0% {
+        width: 0%;
+    }
+    60% {
+        width: 60%
+    }
+}
+
+.progresso-esp {
+    display: flex;
+    align-items: center;
+    height: 4px;
+    background-color: rgb(189, 189, 189);
+    position: relative;
+    border-radius: 20px;
+}
+
+.progresso-esp .barra-progresso-esp {
+    position: absolute;
+    height: 140%;
+    background-color: rgb(66, 74, 124);
+    width: 30%;
+    border-radius: 20px;
+    animation: barra-esp 3s;
+}
+
+@keyframes barra-esp {
+    0% {
+        width: 0%;
+    }
+    30% {
+        width: 30%
+    }
+}
+/* Customização do botão de voltar */
+.voltar {
+    text-align: center;
+}
+.voltar a {
+    border-radius: 40%;
+    font-size: 15px;
+    margin-bottom: 30px;
+    margin-left: 15px;
+    margin-top: 30px;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.voltar a:link, .voltar a:visited {
+    border-radius: 40%;
+    background-color: white;
+    color: rgb(33, 52, 189);
+    border: 2px solid rgb(104, 117, 212);
+    padding: 7px 20px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 300ms;
+}
+.voltar a:hover, .voltar a:active {
+    border-radius: 40%;
+    background-color: rgb(33, 52, 189);
+    box-shadow: 0px 0px 10px rgb(79, 94, 124);
+    color: white;
+}
+/* Customização do footer */
+footer p {
+    text-align: center;
+    font-family: 'Courgette', cursive;
+    color: white;
+    background-color: rgb(33, 52, 189);
+    padding: 20px;
+}
+/* Responsividade */
+@media (max-width: 1130px) {
+    .coluna {
+        background-size: 150%;
+        background-position: top;
+    }
+    h1#pedro {
+       margin-left: 0; 
+    }
+    .center h1 {
+        margin: 30px;
+        font-size: 47px;
+    }
+    @keyframes digitando {
+        from {
+            width: 0;
+        }
+        to {
+            width: 20em;
+        }
+    }
+}
+
+@media (max-width: 963px) {
+    .coluna {
+        display: flex;
+        flex-direction: column;
+        background-size: 100%;
+    }
+    .center {
+        padding-top: 50px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .center h1, .center p, .center h3 {
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+    .certer h1 {
+        font-size: 50px;
+    }
+    .lateral {
+        width: 100%;
+    }
+    .lateral img {
+        width: 30%;
+        margin: 20px;
+    }
+    .lateral h2, .lateral p, .lateral a {
+        color: white;
+        padding: 20px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 575px) {
+    .coluna {
+        background-size: 120%;
+    }
+    .layout a {
+        font-size: 20px;
+        display: flex;
+        color: white;
+        padding: 10px;
+    }
+    h3#ola {
+        font-size: 20px;
+    }
+    h1#pedro {
+        font-size: 30px;
+    }
+    p#estudante {
+        font-size: 15px;
+    }
+    @keyframes digitando {
+        from {
+            width: 0;
+        }
+        to {
+            width: 14em;
+        }
+    }
+    .texto p {
+        line-height: 30px;
+        margin: 20px;
+        font-size: 17px;
+    }
+    .texto {
+        line-height: 25px;
+        padding-top: 20px;
+        padding-left: 30px;
+        width: 80%;
+    }
+    .texto h2 {
+        padding-bottom: 20px;
+        padding-top: 20px;
+        font-size: 26px;
+        color: rgb(82, 89, 138);
+    }
+    .texto h3 {
+        font-family: 'Source Code Pro', monospace;
+        font-size: 23px;
+        color: rgb(84, 90, 128);
+    }
+    .texto a {
+        text-decoration: none;
+        color: rgb(82, 89, 138);
+    }
+    
+}
+/* Responsividade mobile */
+@media (max-width: 414px) {
+    .coluna {
+        background-size: 160%;
+    }
+    /* Custumozação para aparecer a barra de navegação quando o botao for ativado */
+    .layout {
+      display: block;
+      position: absolute;
+      width: 100%;
+      background: rgb(33, 52, 189);
+      transition: 0.6s;
+      z-index: 1000;
+      margin-top: 48px;
+      height: 0px;
+      visibility: hidden;
+    }
+    #nav.active .layout {
+      height: 100vh;
+      visibility: visible;
+      overflow-y: auto;
+    }
+    .layout a {
+      padding: 1rem 0;
+      margin: 0 1rem;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    }
+    /* Buttom mobile ativado */
+    #btn-mobile {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      padding: 1rem 1rem;
+      font-size: 20px;
+      border: none;
+      cursor: pointer;
+      gap: 0.5rem;
+      z-index: 10000;
+      color: white;
+      background-color: rgb(33, 52, 189);
+    }
+    #hamburger {
+      border-top: 2px solid;
+      width: 20px;
+    }
+    #hamburger::after,
+    #hamburger::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: currentColor;
+      margin-top: 6px;
+      transition: 0.3s;
+      position: relative;
+    }
+    #nav.active #hamburger {
+      border-top-color: transparent;
+    }
+    #nav.active #hamburger::before {
+      transform: rotate(135deg);
+    }
+    #nav.active #hamburger::after {
+      transform: rotate(-135deg);
+      top: -8px;
+    }
+    .icons {
+        margin: 20px;
+    }
+    .icons a {
+        padding: 10px;
+    }
+    .lateral h2 {
+        font-size: 17px;
+    }
+    .lateral p, .lateral a {
+        font-size: 15px;
+    }
+    .texto p {
+        line-height: 25px;
+        margin: 20px;
+        font-size: 20px;
+    }
+    .texto {
+        padding: 1rem;
+        color: rgb(52, 57, 88);
+        width: 90%;
+    }
+    .texto h2 {
+        font-family: 'Source Code Pro', monospace;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        font-size: 30px;
+        color: rgb(82, 89, 138);
+    }
+    
+    .texto h3 {
+        font-family: 'Source Code Pro', monospace;
+        font-size: 23px;
+        color: rgb(84, 90, 128);
+        padding: 10px;
+    }
+    
+    .texto a {
+        text-decoration: none;
+        color: rgb(82, 89, 138);
+    }
+  }
