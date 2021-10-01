@@ -522,7 +522,7 @@ footer p {
     /* Custumozação para aparecer a barra de navegação quando o botao for ativado */
     .layout {
       display: block;
-      position: fixed;
+      position: absolute;
       width: 100%;
       background: rgb(104, 117, 212);
       transition: 0.6s;
@@ -546,7 +546,7 @@ footer p {
       width: 100%;
       display: flex;
       justify-content: center;
-      position: fixed;
+      position: absolute;
       padding: 1rem 1rem;
       font-size: 20px;
       border: none;
