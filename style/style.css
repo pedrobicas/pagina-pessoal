@@ -17,7 +17,7 @@ html {
     position: fixed;
     display: flex;
     justify-content: center;
-    background-color: rgb(68, 74, 117);
+    background-color: rgb(104, 117, 212);
     z-index: 1000;
 }
 .layout a {
@@ -28,8 +28,8 @@ html {
     color: white;
     padding: 20px;
     text-decoration: none;
-    background-image: -webkit-linear-gradient(45deg, rgb(79, 94, 124) 50%, transparent 50%);
-    background-image: linear-gradient(45deg, rgb(79, 94, 124) 50%, transparent 50%);
+    background-image: -webkit-linear-gradient(45deg, rgb(121, 131, 207) 50%, transparent 50%);
+    background-image: linear-gradient(45deg, rgb(121, 131, 207) 50%, transparent 50%);
     background-position: 100%;
     background-size: 400%;
     -webkit-transition: background 300ms ease-in-out;
@@ -81,7 +81,7 @@ html {
 .lateral {
     display: flex;
     width: 40%;
-    background-color: rgb(68, 74, 117);
+    background-color: rgb(104, 117, 212);
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
@@ -383,8 +383,8 @@ html {
 .voltar a:link, .voltar a:visited {
     border-radius: 40%;
     background-color: white;
-    color: rgb(52, 57, 88);
-    border: 2px solid rgb(52, 57, 88);
+    color: rgb(104, 117, 212);
+    border: 2px solid rgb(104, 117, 212);
     padding: 7px 20px;
     text-decoration: none;
     display: inline-block;
@@ -401,7 +401,7 @@ footer p {
     text-align: center;
     font-family: 'Courgette', cursive;
     color: white;
-    background-color: rgb(68, 74, 117);
+    background-color: rgb(104, 117, 212);
     padding: 20px;
 }
 /* Responsividade */
@@ -524,7 +524,7 @@ footer p {
       display: block;
       position: absolute;
       width: 100%;
-      background: rgb(52, 57, 88);
+      background: rgb(104, 117, 212);
       transition: 0.6s;
       z-index: 1000;
       margin-top: 56px;
@@ -554,7 +554,7 @@ footer p {
       gap: 0.5rem;
       z-index: 10000;
       color: white;
-      background-color: rgb(52, 57, 88);
+      background-color: rgb(104, 117, 212);
     }
     #hamburger {
       border-top: 2px solid;
